@@ -1,0 +1,5 @@
+- hosts: all
+  tasks:
+    - name: Task | Delete the authorized Key
+      become: yes
+      command: rm -f '/root/.ssh/authorized_keys'

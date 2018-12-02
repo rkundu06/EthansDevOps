@@ -1,0 +1,6 @@
+- hosts: all
+  vars:
+    pack_name: httpd
+    service_name: httpd
+  tasks:
+    - 

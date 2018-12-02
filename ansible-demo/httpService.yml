@@ -1,0 +1,13 @@
+- hosts: all
+
+  vars:
+    pack_name: httpd
+    serv_name: httpd
+
+  tasks:
+    - name: Install {{ pack_name }}
+      yum: pkg={{ pack_name }} state=installed
+      become: Yes
+    - name: Start {{ serv_name }} 
+      service: name={{ serv_name }} state=started
+      become: Yes
